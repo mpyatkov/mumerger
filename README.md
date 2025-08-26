@@ -9,7 +9,7 @@ Instead of simply taking the union of intervals, this method models each peak as
 ### Algorithm description
 
 1.  **Model**: Each individual peak (`start`, `end`) is converted into a Gaussian (normal) distribution with a mean (`mu`) and standard deviation (`sigma`).
-2.  **Combine**: For simplicity, consider a single isolated region that contains multiple peaks from different conditions. Within this region, the peak probability distributions are summed to create a combined probability landscape. The key difference from the original algorithm is that all information about condition is ignored, and each peak is assigned an equal, condition-independent weight. This resolve the issue when number of replicates are different for each condition [issue](https://github.com/Dowell-Lab/TFEA/issues/33). 
+2.  **Combine**: For simplicity, consider a single isolated region that contains multiple peaks from different conditions. Within this region, the peak probability distributions are summed to create a combined probability landscape. The key difference from the original algorithm is that all information about condition is ignored, and each peak is assigned an equal, condition-independent weight. This resolve the [issue](https://github.com/Dowell-Lab/TFEA/issues/33) when number of replicates are different for each condition. 
 3.  **Find Maxima**: The algorithm identifies the locations of local maxima in the combined landscape, which represent the new consensus peak centers.
 4.  **Refine & Resolve**: A new width (`sigma`) is calculated for each new peak based on a weighted average of nearby original peaks. Any remaining overlaps between the new peaks are resolved to produce the final, non-overlapping master peak list.
 
