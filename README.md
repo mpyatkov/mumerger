@@ -16,7 +16,8 @@ Instead of simply taking the union of intervals, this method models each peak as
 ### Algorithm Visualization
 
 ![Illustration of the muMerge algorithm](./docs/comparison.jpg)
-*Figure: Comparison original mumerge implemented in TFEA and current implementation.*
+
+> *Figure: Comparison original mumerge implemented in TFEA and current implementation.*
 
 ### Perfomance optimization
 
