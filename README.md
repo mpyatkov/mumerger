@@ -31,6 +31,11 @@ This implementation supports multithreading, so feel free to use the _ncores_ pa
 This example demonstrates the full workflow, from loading input files to generating the final consensus peak BED file.
 
 ```r
+# Install GenomicRanges from Bioconductor
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("YourPackageName")
+
 install.packages("remotes")   # if not already installed
 remotes::install_github("mpyatkov/mumerger", dependencies = TRUE)
 
