@@ -34,7 +34,7 @@ This example demonstrates the full workflow, from loading input files to generat
 # Install GenomicRanges from Bioconductor
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
-BiocManager::install("YourPackageName")
+BiocManager::install("GenomicRanges")
 
 install.packages("remotes")   # if not already installed
 remotes::install_github("mpyatkov/mumerger", dependencies = TRUE)
